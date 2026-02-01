@@ -4,11 +4,13 @@ services:
     env: node
     region: oregon
     plan: free
-    buildCommand: npm install
+    buildCommand: npm install && npm run seed
     startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production
+      - key: SKIP_EMAIL_VERIFICATION
+        value: "true"
       - key: MONGODB_URI
         sync: false
       - key: JWT_SECRET
