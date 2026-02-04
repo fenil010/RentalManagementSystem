@@ -128,7 +128,7 @@ const Register = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="input-field pl-10"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all"
                   placeholder="John Doe"
                   required
                 />
@@ -146,7 +146,7 @@ const Register = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="input-field pl-10"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all"
                   placeholder="you@example.com"
                   required
                 />
@@ -164,7 +164,7 @@ const Register = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="input-field pl-10"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all"
                   placeholder="+1 (555) 000-0000"
                 />
               </div>
@@ -211,7 +211,7 @@ const Register = () => {
                   name="password"
                   value={formData.password}
                   onChange={handleChange}
-                  className="input-field pl-10 pr-10"
+                  className="w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all"
                   placeholder="••••••••"
                   required
                 />
@@ -236,7 +236,7 @@ const Register = () => {
                   name="confirmPassword"
                   value={formData.confirmPassword}
                   onChange={handleChange}
-                  className="input-field pl-10"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all"
                   placeholder="••••••••"
                   required
                 />
@@ -255,11 +255,11 @@ const Register = () => {
                 />
                 <label htmlFor="terms" className="text-xs text-gray-500">
                   I agree to the{' '}
-                  <Link to="/terms" className="text-gray-900 hover:text-black underline">
+                  <Link to="/terms-and-conditions" className="text-gray-900 hover:text-black underline">
                     Terms of Service
                   </Link>{' '}
                   and{' '}
-                  <Link to="/privacy" className="text-gray-900 hover:text-black underline">
+                  <Link to="/terms-and-conditions" className="text-gray-900 hover:text-black underline">
                     Privacy Policy
                   </Link>
                 </label>
@@ -277,29 +277,6 @@ const Register = () => {
                 )}
               </button>
             </form>
-
-            {/* Sign in link */}
-            <div className="text-center mt-5">
-              <p className="text-gray-500 text-sm">
-                Already have an account?{' '}
-                <Link to="/login" className="text-gray-900 hover:text-black font-medium underline">
-                  Sign in
-                </Link>
-              </label>
-            </div>
-
-            <button
-              type="submit"
-              disabled={isLoading}
-              className="w-full btn-primary h-11 flex items-center justify-center"
-            >
-              {isLoading ? (
-                <div className="spinner" />
-              ) : (
-                'Create account'
-              )}
-            </button>
-          </form>
 
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-600">

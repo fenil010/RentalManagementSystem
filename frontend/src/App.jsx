@@ -129,6 +129,8 @@ function App() {
           
           {/* Terms & Conditions */}
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+          <Route path="/terms" element={<TermsAndConditions />} />
+          <Route path="/privacy" element={<TermsAndConditions />} />
           
           {/* Fallback redirect */}
           <Route path="/*" element={<Navigate to="/" replace />} />
